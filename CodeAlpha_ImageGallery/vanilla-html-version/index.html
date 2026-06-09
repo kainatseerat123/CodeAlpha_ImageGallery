@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Advanced Image Gallery</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <div class="controls-container">
+        <div class="top-bar">
+            <input type="text" id="searchBar" placeholder="Search by name (e.g., Nature, City)...">
+            <button id="themeToggle">🌙 Dark Mode</button>
+        </div>
+        
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="nature">Nature</button>
+            <button class="filter-btn" data-filter="city">City</button>
+            <button class="filter-btn" data-filter="tech">Tech</button>
+            <button class="filter-btn" data-filter="favorites">❤️ Favorites</button>
+        </div>
+    </div>
+
+    <div class="full-img" id="fullImgBox">
+        <span class="nav-btn prev-btn" onclick="changeImg(-1)">&#10094;</span>
+        <img src="" id="fullImg" alt="Full Screen View">
+        <span class="nav-btn next-btn" onclick="changeImg(1)">&#10095;</span>
+        <span class="close-btn" onclick="closeFullImg()">X</span>
+    </div>
+
+    <div class="img-gallery" id="gallery">
+        <div class="img-box" data-category="city" data-title="Traditional Courtyard Sitting">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img1.jpeg')">🤍</span>
+            <img src="images/img1.jpeg" onclick="openFullImg(this)" alt="Traditional Courtyard Sitting">
+        </div>
+        <div class="img-box" data-category="nature" data-title="Pink Flowers Wall">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img2.jpeg')">🤍</span>
+            <img src="images/img2.jpeg" onclick="openFullImg(this)" alt="Pink Flowers Wall">
+        </div>
+        <div class="img-box" data-category="tech" data-title="Open Book Purple Flower">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img3.jpeg')">🤍</span>
+            <img src="images/img3.jpeg" onclick="openFullImg(this)" alt="Open Book Purple Flower">
+        </div>
+        <div class="img-box" data-category="nature" data-title="Sunset Lake Boardwalk">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img4.jpeg')">🤍</span>
+            <img src="images/img4.jpeg" onclick="openFullImg(this)" alt="Sunset Lake Boardwalk">
+        </div>
+
+        <div class="img-box" data-category="tech" data-title="Beach Essentials Sunglasses Sunscreen">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img5.jpeg')">🤍</span>
+            <img src="images/img5.jpeg" onclick="openFullImg(this)" alt="Beach Essentials Sunglasses Sunscreen">
+        </div>
+        <div class="img-box" data-category="nature" data-title="Mountain Valley River Picnic">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img6.jpeg')">🤍</span>
+            <img src="images/img6.jpeg" onclick="openFullImg(this)" alt="Mountain Valley River Picnic">
+        </div>
+        <div class="img-box" data-category="nature" data-title="Ocean Waves Sandy Beach">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img7.jpeg')">🤍</span>
+            <img src="images/img7.jpeg" onclick="openFullImg(this)" alt="Ocean Waves Sandy Beach">
+        </div>
+        <div class="img-box" data-category="nature" data-title="Tropical Cave Beach Palms">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img8.jpeg')">🤍</span>
+            <img src="images/img8.jpeg" onclick="openFullImg(this)" alt="Tropical Cave Beach Palms">
+        </div>
+
+        <div class="img-box" data-category="tech" data-title="Vintage Radio Lantern Setup">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img9.jpeg')">🤍</span>
+            <img src="images/img9.jpeg" onclick="openFullImg(this)" alt="Vintage Radio Lantern Setup">
+        </div>
+        <div class="img-box" data-category="nature" data-title="Swans Lake Spring Blossom">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img10.jpeg')">🤍</span>
+            <img src="images/img10.jpeg" onclick="openFullImg(this)" alt="Swans Lake Spring Blossom">
+        </div>
+        <div class="img-box" data-category="city" data-title="Rustic Brick Wall Clay Pots">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img11.jpeg')">🤍</span>
+            <img src="images/img11.jpeg" onclick="openFullImg(this)" alt="Rustic Brick Wall Clay Pots">
+        </div>
+        <div class="img-box" data-category="city" data-title="Village Pottery Display Tree">
+            <span class="fav-btn" onclick="toggleFavorite(this, 'images/img12.jpeg')">🤍</span>
+            <img src="images/img12.jpeg" onclick="openFullImg(this)" alt="Village Pottery Display Tree">
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
